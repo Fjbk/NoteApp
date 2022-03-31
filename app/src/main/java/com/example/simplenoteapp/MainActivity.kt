@@ -22,22 +22,18 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello and good day, $name!")
-}
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     SimpleNoteAppTheme {
-        Greeting("Android")
+
     }
 }
