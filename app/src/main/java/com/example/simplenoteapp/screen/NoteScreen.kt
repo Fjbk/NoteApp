@@ -26,6 +26,7 @@ import com.example.simplenoteapp.components.NoteButton
 import com.example.simplenoteapp.components.NoteInputText
 import com.example.simplenoteapp.data.NotesDataSource
 import com.example.simplenoteapp.model.Note
+import com.example.simplenoteapp.util.formatDate
 import java.time.format.DateTimeFormatter
 
 @Composable
@@ -120,7 +121,7 @@ fun NoteRow(
                 horizontalAlignment = Alignment.Start) {
             Text(text = note.title, style = MaterialTheme.typography.subtitle2)
             Text(text = note.description, style = MaterialTheme.typography.subtitle1)
-            Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")),
+            Text(text = formatDate(note.entryDate.time),
                 style = MaterialTheme.typography.caption)
         }
     }
